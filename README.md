@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    1. forEach: calls a function on each element in the array.  Affects and  changes the existing array.
+    2. map: calls a function on each element in the array. Uses return values and importantly, creates a new array.
+
 2. What is the difference between a function and a method?
+    1. Function:  allows us to execute code when we need to use it; are blocks of code that we can call.; can have a unique name, can receive data (parameter/arguments); can return data; scope. Not all functions are methods.
+    2. Method:  special type of function that belongs to an object. Is able to operate on data contained within the class. All methods are functions.
 
 3. What is closure?
 
+ Code that’s been identified elsewhere that we can use for later. The importance of a lexical scope ===belonging within a nested function, helps to identify where a function originated from.
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. Window/Global Object Binding: "for never using" is binding the this keyword to the window. the default location of the 'this' keyword and points to the entire JS library ("the entire forest"). "this" by default is binded to the window. "this" by itself doesn't have any binding context! you don't ever want to bind to the window but you need to know that it exists.
+    2. Implicit Binding:  "for objects and methods" is automatic binding to objects and methods where the binding context of the object is clear. specifically, you have to look to the left side of the method (where it is invoked) to identify the this keyword (the binding or "tree in the forest" -- left of the dot.
+    3. New Binding: Uses a constructor function where this keyword is a specific instance of an object that is created and returend by the constructor function. 
+    4. Explicit Binding: "for functions" tells a function what the context of the ‘this’ keyword will be using call, apply or bind -- allows us to explicitly state whether the this keyword is going to be in any given function.
+
 5. Why do we need super() in an extended class?
+
+To be able to sync with the parent constructor in order to access properties and methods. Together with extends it tells the super where to go linking the prototype. In addition to helping bind our objects to one another, super also helps abstract away unnecessary syntax.
 
 ## Project Set up
 
@@ -85,3 +99,5 @@ In your solutions, it is essential that you follow best practices and produce cl
 ## Stretch Problems
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
+
+initial test commit
