@@ -41,7 +41,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: the lexical scope == belonging of 'internal' is inside myFunction() -- the parent! it can be accessed whenver its needed. interal can look outside of it's function scope but not outside of myfunction - kingdom! 
 
 
 const external = "I'm outside the function";
